@@ -1,6 +1,6 @@
 import styles from './Style.module.css'
 
-export const Searchbar = ({ onSubmit, onChange, value }) => {
+export const Searchbar = ({ onSubmit }) => {
     return (
         <header className={styles.Searchbar} onSubmit={evt => onSubmit(evt)}>
             <form className={styles.SearchForm}>
@@ -9,9 +9,7 @@ export const Searchbar = ({ onSubmit, onChange, value }) => {
                 </button>
 
                 <input
-                    onChange={evt => onChange(evt)}
                     name="search"
-                    value={value}
                     className={styles.SearchFormInput}
                     type="text"
                     autoComplete="off"
