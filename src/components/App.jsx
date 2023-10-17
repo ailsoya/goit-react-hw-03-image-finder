@@ -76,7 +76,7 @@ export class App extends Component {
         <ImageGallery items={picsToRender} onClick={this.openModal}/>
         <div className={styles.Container}>
           <Loader isLoading={isLoading} />
-          {Object.keys(picsToRender).length !== 0 && <Button onClick={this.addMore} />}
+          {Object.keys(picsToRender).length % 12 === 0 && <Button onClick={this.addMore} />}
         </div>
         {isModalOpen && <Modal onClick={this.closeModal} item={picToModal} />}
       </div>
