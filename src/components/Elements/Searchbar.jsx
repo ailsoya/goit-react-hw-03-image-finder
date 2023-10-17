@@ -2,8 +2,8 @@ import styles from './Style.module.css'
 
 export const Searchbar = ({ onSubmit }) => {
     return (
-        <header className={styles.Searchbar} onSubmit={evt => onSubmit(evt)}>
-            <form className={styles.SearchForm}>
+        <header className={styles.Searchbar}>
+            <form className={styles.SearchForm}  onSubmit={evt => onSubmit(evt)}>
                 <button type="submit" className={styles.SearchFormButton}>
                     <span className={styles.SearchFormButtonLabel}>Search</span>
                 </button>
